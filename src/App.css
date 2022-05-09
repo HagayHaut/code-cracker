@@ -40,7 +40,7 @@
 .board-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .board {
@@ -48,4 +48,16 @@
   border: 1px solid red;
   padding: 1rem 1rem;
   vertical-align: middle;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.navbar h3 {
+  padding: 7px;
+  border: 1px solid black;
+  border-radius: 10px;
 }

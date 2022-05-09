@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import NavBar from './NavBar';
 import Game from './Game';
 import SettingsForm from './SettingsForm';
+import { Route, Routes as Switch } from 'react-router-dom';
+import Help from './Help'
 
 function App() {
 
@@ -14,7 +16,6 @@ function App() {
     numberOfGameBoards: 1,
     showTimer: false
   });
-  const [showSettings, setShowSettings] = useState(false)
 
   function onUsernameSubmit(name) {
     setUsername(name)
@@ -22,12 +23,19 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar setShowSettings={setShowSettings}/>
-    { username ? 
+      { username ? <NavBar /> : <UsernameForm onUsernameSubmit={onUsernameSubmit}/>}
+      {/* <NavBar setShowSettings={setShowSettings}/> */}
+      <Switch>
+        <Route path='/game' element={<Game username={username} settings={settings}/>}/>
+        <Route path='/settings' element={<SettingsForm onUsernameSubmit={onUsernameSubmit}/>}/>
+         
+        <Route path='/help' element={<Help />}/>
+      </Switch>
+    {/* { username ? 
       <Game username={username} settings={settings}/> : 
       <UsernameForm onUsernameSubmit={onUsernameSubmit}/>}
     {showSettings &&
-      <SettingsForm setSettings={setSettings}/>}
+      <SettingsForm setSettings={setSettings}/>} */}
     </div>
   );
 }
