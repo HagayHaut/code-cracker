@@ -2,7 +2,7 @@ import '../App.css';
 import UsernameForm from './UsernameForm';
 import React, { useState } from 'react';
 import NavBar from './NavBar';
-import Content from './Content';
+import Game from './Game';
 import SettingsForm from './SettingsForm';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-    { username ? <Content username={username}/> : <UsernameForm onUsernameSubmit={onUsernameSubmit}/>}
+    { username ? <Game username={username}/> : <UsernameForm onUsernameSubmit={onUsernameSubmit}/>}
     </div>
   );
 }
