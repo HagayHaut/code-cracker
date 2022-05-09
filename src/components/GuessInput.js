@@ -27,6 +27,7 @@ function GuessInput({ addGuess, passwordLength }) {
     }
 
   return (
+    <>
     <form onSubmit={handleGuessSubmit}>
         <input 
             type='number' 
@@ -34,8 +35,9 @@ function GuessInput({ addGuess, passwordLength }) {
             onChange={e => setGuessInput(e.target.value)}
             value={guessInput}
         />
-        <input type='submit'/>
+        {/* <input type='submit'/> */}
     </form>
+    </>
   )
 }
 
