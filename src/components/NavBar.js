@@ -1,11 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-function NavBar({setShowSettings}) {
+function NavBar() {
   return (
-    <div style={{ display:'flex', flexDirection:'row', justifyContent: 'space-between'}}>
-        <h3 style={{padding: '5px', border: '1 px solid black'}}>Help</h3>
-        <h3 style={{padding: '5px', border: '1 px solid black'}} onClick={()=>setShowSettings(pre => !pre)}>Options</h3>
+    <div className='navbar'>
+      <NavLink to='/help'>
+        <h3>Help</h3>
+      </NavLink>
+      <NavLink to='/game'>
+        <h3>Game</h3>
+      </NavLink>
+      <NavLink to='/settings'>
+        <h3>Settings</h3>
+      </NavLink>
     </div>
   )
 }
