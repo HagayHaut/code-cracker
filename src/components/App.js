@@ -8,7 +8,13 @@ import SettingsForm from './SettingsForm';
 function App() {
 
   const [username, setUsername] = useState('');
-  const [settings, setSettings] = useState({});
+  const [settings, setSettings] = useState({
+    passwordLength: 4,
+    randomEventsLimit: 0,
+    numberOfGameBoards: 1,
+    showTimer: false
+  });
+  const [showSettings, setShowSettings] = useState(false)
 
   function onUsernameSubmit(name) {
     setUsername(name)
@@ -16,8 +22,12 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
-    { username ? <Game username={username}/> : <UsernameForm onUsernameSubmit={onUsernameSubmit}/>}
+      <NavBar setShowSettings={setShowSettings}/>
+    { username ? 
+      <Game username={username} settings={settings}/> : 
+      <UsernameForm onUsernameSubmit={onUsernameSubmit}/>}
+    {showSettings &&
+      <SettingsForm setSettings={setSettings}/>}
     </div>
   );
 }

@@ -1,17 +1,16 @@
 import React from 'react'
 
-function Guess({ guess, passwordLength, password, index, username }) {
-
+function Guess({ guess, password, index, username }) {
     let hits = 0;
     let misses = 0;
 
     function checkGuess() {
 
-        for (let i = 0; i < passwordLength; i++){
+        for (let i = 0; i < password.length; i++){
             if (guess[i] === password[i]){
                 hits++
             }
-            for (let j = 0; j < passwordLength; j++){
+            for (let j = 0; j < password.length; j++){
                 if(guess[i] === password[j]){
                     misses++
                 }
@@ -29,8 +28,7 @@ function Guess({ guess, passwordLength, password, index, username }) {
             numberOfGuesses: index + 1
         }
         // POST body
-
-        
+ 
     }
 
     return (
