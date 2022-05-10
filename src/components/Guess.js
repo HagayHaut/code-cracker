@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function Guess({ guess, password, index, boardNum}) {
+
     let hits = 0;
     let misses = 0;
     // console.log(boardNum, guess)
@@ -20,6 +21,7 @@ function Guess({ guess, password, index, boardNum}) {
     }
 
     checkGuess();
+
 
     return (
         <li>  

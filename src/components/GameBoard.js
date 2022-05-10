@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Guess from './Guess';
 
-function GameBoard({ password, guesses, addGuess, username, randomEventsLimit, id , shuffle}) {
+function GameBoard({ 
+    password, 
+    guesses, 
+    addGuess, 
+    username, 
+    randomEventsLimit, 
+    id , 
+    shuffle,
+    settings
+  }) {
 
   const [randomEventsCount, setRandomEventsCount] = useState(0)
   const [isSolved, setIsSolved] = useState(false)
@@ -43,6 +52,9 @@ function GameBoard({ password, guesses, addGuess, username, randomEventsLimit, i
 
   const guessList = displayGuesses.map((guess,i) => {
     return <Guess 
+            isSolved={isSolved}
+            guesses={displayGuesses}
+            settings={settings}
             index={i}
             key={guess} 
             guess={guess}
