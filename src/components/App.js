@@ -5,7 +5,8 @@ import NavBar from './NavBar';
 import Game from './Game';
 import SettingsForm from './SettingsForm';
 import { Route, Routes as Switch } from 'react-router-dom';
-import Help from './Help'
+import Help from './Help';
+import Leaderboard from './Leaderboard';
 
 function App() {
 
@@ -38,6 +39,8 @@ function App() {
             <SettingsForm onUsernameSubmit={onUsernameSubmit} setSettings={setSettings}/>
           </>
           }/>
+        <Route path='/leaderboard' element={<Leaderboard />}/>
+
         <Route path='/help' element={
           <>
             <Help />
