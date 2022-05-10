@@ -1,6 +1,63 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-function Guess({ guess, password, index, username, handleBoardWin }) {
+const API = 'http://localhost:4000/games'
+
+function Guess({ 
+    guesses, 
+    settings, 
+    guess, 
+    password, 
+    index, 
+    username, 
+    handleBoardWin,
+    isSolved 
+}) {
+
+    useEffect(() => {
+        setTimeout(() => {
+            if(!isSolved) {
+                if(hits === 4) {
+                const body = {
+                username: username,
+                numberOfGuesses: index + 1,
+                settings: settings,
+                guesses: guesses
+                }
+                handleBoardWin()
+                fetch(API, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(body)
+                })
+                    .then(r => r.json())
+                    .then((d) => console.log(d))
+            }
+            } 
+        }, 250)
+    }, [])
+
+    // useEffect(() => {
+    //     const body = {
+    //         username: username,
+    //         numberOfGuesses: index + 1,
+    //         settings: settings,
+    //         guesses: guesses
+    //     };
+    //     fetch(API, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(body)
+    //     })
+    //         .then(r => r.json())
+    //         .then(() => {
+    //             debugger
+    //         })
+    // }, [isSolved])
+
     let hits = 0;
     let misses = 0;
 
@@ -21,14 +78,11 @@ function Guess({ guess, password, index, username, handleBoardWin }) {
 
     checkGuess();
 
-    if(hits === 4) {
-        const body = {
-            username: username,
-            numberOfGuesses: index + 1
-        }
-        handleBoardWin()
- 
-    }
+    
+
+    
+    
+    
 
     return (
         <li> 
