@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
+
 
 function SettingsForm({setSettings}) {
   const [formData, setFormData] = useState({
@@ -8,6 +10,8 @@ function SettingsForm({setSettings}) {
     showTimer: false
   })
 
+  const history = useNavigate()
+
   function handleChange(e){
     const {name, value} = e.target
     setFormData({...formData, [name]:value})
@@ -16,6 +20,7 @@ function SettingsForm({setSettings}) {
   function handleSubmit(e){
     e.preventDefault()
     setSettings(formData)
+    history('../game')
   }
 
   return (
