@@ -1,32 +1,3 @@
-{
-  "games": [
-    {
-      "username": "hagay",
-      "numberOfGuesses": 1,
-      "settings": {
-        "passwordLength": 4,
-        "randomEventsLimit": 0,
-        "numberOfGameBoards": 1,
-        "showTimer": false
-      },
-      "guesses": [
-        "9143"
-      ],
-      "id": 1
-    },
-    {
-      "username": "hagay",
-      "numberOfGuesses": 1,
-      "settings": {
-        "passwordLength": 4,
-        "randomEventsLimit": 0,
-        "numberOfGameBoards": 1,
-        "showTimer": false
-      },
-      "guesses": [
-        "9143"
-      ],
-      "id": 2
-    }
-  ]
-}
+
+{"games": []}
+

@@ -27,16 +27,27 @@ function GameBoard({
   } 
 
   let displayGuesses = []
-  function upToPassword() {
+  function checkWin() {
+    renderDisplayGuesses()
+
+    if (!isSolved && guesses.includes(password)) {
+      handleBoardWin() 
+    }
+  }
+
+  checkWin()
+
+  function renderDisplayGuesses(){
     for(let i = 0; i < guesses.length; i++) {
       displayGuesses.push(guesses[i]);
       if(guesses[i] === password) break;
     }
   }
-  upToPassword()
 
   function handleBoardWin(){
+    console.log(id, 'solved')
     setIsSolved(true)
+    //fetch call here
   }
 
   const guessList = displayGuesses.map((guess,i) => {
@@ -45,22 +56,21 @@ function GameBoard({
             guesses={displayGuesses}
             settings={settings}
             index={i}
-            password={password} 
             key={guess} 
             guess={guess}
-            username={username}
-            handleBoardWin={handleBoardWin}
+            password={password}
+            boardNum={id}
           />
   })
 
-  return (
 
-    <div className="board">GameBoard {id} - {password}
+  // add classname for solved/unsolved boards.
+  return (
+    <div className="board">GameBoard {id} - {password} {isSolved? 'solved':'inprogress'}
       <ul style={{listStyleType: 'none'}}>
           {guessList}
       </ul>
     </div>
-
   )
 }
 
