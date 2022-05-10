@@ -83,7 +83,7 @@ function Game({ username, settings, setSettings }) {
               addGuess={addGuess}
               handleSolved={handleSolved}
               shuffle={shuffle}
-              key={`board ${game.gameBoardNum+1}`}/>});
+              key={`board ${game.gameBoardNum}`}/>});
     arrGameBoards=arr
   }
   loadGames()

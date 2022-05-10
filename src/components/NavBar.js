@@ -10,6 +10,9 @@ function NavBar() {
       <NavLink to='/game'>
         <h3>Game</h3>
       </NavLink>
+      <NavLink to='/leaderboard'>
+        <h3>Leaderboard</h3>
+      </NavLink>
       <NavLink to='/settings'>
         <h3>Settings</h3>
       </NavLink>

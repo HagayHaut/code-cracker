@@ -1,3 +1,55 @@
-
-{"games": []}
-
+{
+  "games": [
+    {
+      "username": "johnny",
+      "score": 1,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": 0,
+        "numberOfGameBoards": "3",
+        "showTimer": "false"
+      },
+      "password": "2513",
+      "guesses": [
+        "2513"
+      ],
+      "time": 36,
+      "id": 1
+    },
+    {
+      "username": "johnny",
+      "score": 2,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": 0,
+        "numberOfGameBoards": "3",
+        "showTimer": "false"
+      },
+      "password": "7429",
+      "guesses": [
+        "2513",
+        "7429"
+      ],
+      "time": 57,
+      "id": 2
+    },
+    {
+      "username": "johnny",
+      "score": 3,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": 0,
+        "numberOfGameBoards": "3",
+        "showTimer": "false"
+      },
+      "password": "3652",
+      "guesses": [
+        "2513",
+        "7429",
+        "3652"
+      ],
+      "time": 68,
+      "id": 3
+    }
+  ]
+}
