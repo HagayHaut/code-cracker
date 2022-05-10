@@ -1,21 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Guess from './Guess';
-
-function GameBoard({ 
-    password, 
-    guesses, 
-    addGuess, 
-    username, 
-    randomEventsLimit, 
-    id , 
-    shuffle,
-    settings
-  }) {
-
+ 
+function GameBoard({ game, guesses, addGuess, username , shuffle, settings, handleSolved, timer}) {
+  const {password, gameBoardNum, isSolved} = game
+  const {randomEventsLimit} = settings
+ 
   const [randomEventsCount, setRandomEventsCount] = useState(0)
-  const [isSolved, setIsSolved] = useState(false)
-
-
+ 
+ 
   if(randomEventsCount < randomEventsLimit) {
     const nums = ['1','2','3','4','5','6','7','8','9','0'];
     const rand = Math.floor(Math.random() * 10)
@@ -24,54 +16,71 @@ function GameBoard({
       const forceGuess = shuffle(nums).slice(0, password.length).join('')
       addGuess(forceGuess)
     }
-  } 
-
+  }
+ 
   let displayGuesses = []
   function checkWin() {
     renderDisplayGuesses()
-
+ 
     if (!isSolved && guesses.includes(password)) {
-      handleBoardWin() 
+      handleBoardWin()
     }
   }
-
+ 
   checkWin()
-
+ 
   function renderDisplayGuesses(){
     for(let i = 0; i < guesses.length; i++) {
       displayGuesses.push(guesses[i]);
       if(guesses[i] === password) break;
     }
   }
-
+ 
   function handleBoardWin(){
-    console.log(id, 'solved')
-    setIsSolved(true)
+    console.log(gameBoardNum, 'solved')
+    handleSolved(gameBoardNum)
     //fetch call here
+    const body = {
+      username: username,
+      score: displayGuesses.length,
+      settings: settings,
+      password: password,
+      guesses: guesses,
+      time: timer
+    }
+    fetch('http://localhost:4000/games',{
+      method: "POST",
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    }).then(r => r.json())
+    .then(d => {
+      console.log('fetch', d)
+    })
   }
-
+ 
   const guessList = displayGuesses.map((guess,i) => {
-    return <Guess 
-            isSolved={isSolved}
-            guesses={displayGuesses}
-            settings={settings}
+    return <Guess
             index={i}
-            key={guess} 
+            key={guess}
             guess={guess}
             password={password}
-            boardNum={id}
+            boardNum={gameBoardNum}
           />
   })
-
-
+ 
+ 
   // add classname for solved/unsolved boards.
   return (
-    <div className="board">GameBoard {id} - {password} {isSolved? 'solved':'inprogress'}
+    <div className="board">GameBoard {gameBoardNum} -
+    {/* {password} */}
+    {isSolved? 'solved':'inprogress'}
       <ul style={{listStyleType: 'none'}}>
           {guessList}
       </ul>
     </div>
   )
 }
-
+ 
 export default GameBoard
