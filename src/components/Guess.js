@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Guess({ guess, password, index, username }) {
+function Guess({ guess, password, index, username, handleBoardWin }) {
     let hits = 0;
     let misses = 0;
 
@@ -17,7 +17,6 @@ function Guess({ guess, password, index, username }) {
             }
         }
         misses -= hits;
-        
     }
 
     checkGuess();
@@ -27,7 +26,7 @@ function Guess({ guess, password, index, username }) {
             username: username,
             numberOfGuesses: index + 1
         }
-        // POST body
+        handleBoardWin()
  
     }
 

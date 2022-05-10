@@ -23,19 +23,28 @@ function App() {
 
   return (
     <div className="App">
-      { username ? <NavBar /> : <UsernameForm onUsernameSubmit={onUsernameSubmit}/>}
-      {/* <NavBar setShowSettings={setShowSettings}/> */}
+      { username ? 
+        <NavBar /> :
+        <UsernameForm onUsernameSubmit={onUsernameSubmit}/>
+      }
+
       <Switch>
-        <Route path='/game' element={<Game username={username} settings={settings}/>}/>
-        <Route path='/settings' element={<SettingsForm onUsernameSubmit={onUsernameSubmit}/>}/>
-         
-        <Route path='/help' element={<Help />}/>
+        <Route path='/game' element={
+            <Game username={username} settings={settings} />}/>
+
+        <Route path='/settings' element={
+          <>
+            <Game username={username} settings={settings}/>
+            <SettingsForm onUsernameSubmit={onUsernameSubmit} setSettings={setSettings}/>
+          </>
+          }/>
+        <Route path='/help' element={
+          <>
+            <Help />
+            <Game username={username} settings={settings}/>
+          </> }/>
       </Switch>
-    {/* { username ? 
-      <Game username={username} settings={settings}/> : 
-      <UsernameForm onUsernameSubmit={onUsernameSubmit}/>}
-    {showSettings &&
-      <SettingsForm setSettings={setSettings}/>} */}
+
     </div>
   );
 }
