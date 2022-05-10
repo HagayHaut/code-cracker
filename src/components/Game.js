@@ -50,6 +50,7 @@ function Game({ username, settings }) {
     guesses={guesses} 
     password={password}
     username={username}
+    settings={settings}
     randomEventsLimit={randomEventsLimit}
     shuffle={shuffle}
     key={`board ${i+1}`}
