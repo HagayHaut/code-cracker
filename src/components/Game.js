@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import GameBoard from './GameBoard';
 import GuessInput from './GuessInput';
+import styled from 'styled-components';
+
+const StyledButton = styled.button`
+  background: #829ab1;
+  padding: 5px 5px 5px 5px;
+  color: #102a43;
+  font-weight: bolder;
+`
  
 function Game({ username, settings, setSettings }) {
   const {passwordLength, numberOfGameBoards, showTimer} = settings
@@ -102,7 +110,7 @@ function Game({ username, settings, setSettings }) {
       <br></br>
       <GuessInput passwordLength={passwordLength} addGuess={addGuess}/>
       <br></br>
-      <button onClick={()=>handleNewGame()}>New Game</button>
+      <StyledButton onClick={()=>handleNewGame()}>New Game</StyledButton>
       <br></br>
       {showTimer ? <p>{convertTimer}</p> : null}
       <br></br>
