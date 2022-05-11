@@ -4,9 +4,9 @@ import GuessInput from './GuessInput';
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  background: #829ab1;
+  background: #0e7c7b;
   padding: 5px 5px 5px 5px;
-  color: #102a43;
+  color: white;
   font-weight: bolder;
 `
  
@@ -117,13 +117,12 @@ function Game({ username, settings, setSettings }) {
  
   return (
     <div className='game'>
-      <div>Hello, {username}</div>
-      <br></br>
-      <GuessInput guesses={guesses} passwordLength={parseInt(passwordLength)} addGuess={addGuess}/>
-      <br></br>
+      <h2>Hello, {username}</h2>
+      {showTimer ? <p>{convertTimer}</p> : null}
       <StyledButton onClick={()=>handleNewGame()}>New Game</StyledButton>
       <br></br>
-      {showTimer ? <p>{convertTimer}</p> : null}
+      <br></br>
+      <GuessInput guesses={guesses} passwordLength={parseInt(passwordLength)} addGuess={addGuess}/>
       <br></br>
       <div className='inline-block'>
         <div className='board-container'>
