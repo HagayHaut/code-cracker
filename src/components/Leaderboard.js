@@ -13,6 +13,7 @@ function Leaderboard(){
     function toTimeFormat(time) {
         return `${Math.floor(time / 60)}:${time % 60 < 10 ? '0' + time % 60: time % 60}`
     }
+
     function toDateFormat(dateStr){
         return `${dateStr.substr(5,2)}/${dateStr.substr(8,2)}/${dateStr.substr(0,4)}`
     }
@@ -58,6 +59,7 @@ function Leaderboard(){
           </tbody>
     </table>
     </>
+
 }
 
 export default Leaderboard;

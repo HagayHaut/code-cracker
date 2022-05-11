@@ -70,32 +70,6 @@
       "time": 332,
       "date": "2022-05-11T14:35:50.202Z",
       "id": 3
-    },
-    {
-      "username": "johnny",
-      "score": 10,
-      "settings": {
-        "passwordLength": 4,
-        "randomEventsLimit": 0,
-        "numberOfGameBoards": "4",
-        "showTimer": true
-      },
-      "password": "3260",
-      "guesses": [
-        "1234",
-        "5678",
-        "9012",
-        "3567",
-        "6312",
-        "7312",
-        "9138",
-        "5024",
-        "9824",
-        "3260"
-      ],
-      "time": 339,
-      "date": "2022-05-11T14:35:57.857Z",
-      "id": 4
     }
   ]
 }

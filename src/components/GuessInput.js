@@ -31,6 +31,7 @@ function GuessInput({ addGuess, passwordLength, guesses }) {
 
     function validateGuess(guess) {
 
+
         if(guesses.includes(guessInput)){
             setHelpText("Uh oh, looks like you've guessed that already.")
             return false;
@@ -45,6 +46,7 @@ function GuessInput({ addGuess, passwordLength, guesses }) {
         }
         if(!parseInt(guess)){
             setHelpText('Uh oh, looks like your guess isn\'t a number.')
+
             return false;
         }
         setHelpText('')
@@ -55,6 +57,7 @@ function GuessInput({ addGuess, passwordLength, guesses }) {
     <>
     <form onSubmit={handleGuessSubmit}>
         <StyledInput 
+
             id='guess-input'
             type='text' 
             placeholder='Enter Guess' 
