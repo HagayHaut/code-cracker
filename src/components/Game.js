@@ -108,7 +108,7 @@ function Game({ username, settings, setSettings }) {
     <div className='game'>
       <div>Hello, {username}</div>
       <br></br>
-      <GuessInput passwordLength={passwordLength} addGuess={addGuess}/>
+      <GuessInput guesses={guesses} passwordLength={parseInt(passwordLength)} addGuess={addGuess}/>
       <br></br>
       <StyledButton onClick={()=>handleNewGame()}>New Game</StyledButton>
       <br></br>

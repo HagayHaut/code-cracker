@@ -83,6 +83,58 @@
       ],
       "time": 38,
       "id": 5
+    },
+    {
+      "username": "hagay",
+      "score": 1,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": "1",
+        "numberOfGameBoards": "2",
+        "showTimer": "false"
+      },
+      "password": "4637",
+      "guesses": [
+        "4637"
+      ],
+      "time": 18,
+      "id": 6
+    },
+    {
+      "username": "hagay",
+      "score": 2,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": "1",
+        "numberOfGameBoards": "2",
+        "showTimer": "false"
+      },
+      "password": "4098",
+      "guesses": [
+        "4637",
+        "4098"
+      ],
+      "time": 22,
+      "id": 7
+    },
+    {
+      "username": "hagay",
+      "score": 3,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": "1",
+        "numberOfGameBoards": "2",
+        "showTimer": "false"
+      },
+      "password": "9408",
+      "guesses": [
+        "6975",
+        "6975",
+        "9408"
+      ],
+      "time": 39,
+      "date": "2022-05-11T13:44:40.351Z",
+      "id": 8
     }
   ]
 }
