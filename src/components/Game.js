@@ -97,15 +97,19 @@ function Game({ username, settings, setSettings }) {
   }
  
   return (
-    <>
+    <div className='game'>
       <div>Hello, {username}</div>
+      <br></br>
       <GuessInput passwordLength={passwordLength} addGuess={addGuess}/>
+      <br></br>
       <button onClick={()=>handleNewGame()}>New Game</button>
+      <br></br>
       {showTimer ? <p>{convertTimer}</p> : null}
+      <br></br>
       <div className='board-container'>
         {arrGameBoards}
       </div>
-    </>
+    </div>
   )
 }
  

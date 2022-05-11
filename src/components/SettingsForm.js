@@ -1,6 +1,34 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 
+const StyledInput = styled.input`
+  background: #f0f4f8;
+  height: 22px;
+  color: #102a43;
+  font-weight: bolder;
+
+  &&:focus {
+    border: 2px solid #d9e2ec
+  }
+`
+
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  
+`
+
+const Div = styled.div`
+  display: inline-block;
+`
+
+const StyledSubmit = styled.button`
+  background: #829ab1;
+  padding: 5px 5px 5px 5px;
+  color: #102a43;
+  font-weight: bolder;
+`
 
 function SettingsForm({setSettings}) {
   const [formData, setFormData] = useState({
@@ -24,17 +52,22 @@ function SettingsForm({setSettings}) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label> passwordLength</label>
-      <input type='number' name="passwordLength" value={formData.passwordLength} onChange={handleChange}></input>
-      <label> randomEventsLimit</label>
-      <input type='number' name="randomEventsLimit" value={formData.randomEventsLimit} onChange={handleChange}></input>
-      <label> numberOfGameBoards</label>
-      <input type='number' name="numberOfGameBoards" value={formData.numberOfGameBoards} onChange={handleChange}></input>
-      <label> showTimer</label>
-      <input type='checkbox' name="showTimer" value={formData.showTimer} onChange={handleChange}></input>
-      <button type='submit'>Submit</button>
-    </form>
+    <>
+      <h3>Game Settings</h3>
+      <Div>
+        <StyledForm onSubmit={handleSubmit}>
+          <label>Passcode Length</label>
+          <StyledInput type='number' name="passwordLength" value={formData.passwordLength} onChange={handleChange}></StyledInput>
+          <label>Max Number of Forced Guesses</label>
+          <StyledInput type='number' name="randomEventsLimit" value={formData.randomEventsLimit} onChange={handleChange}></StyledInput>
+          <label>Number of Game Boards</label>
+          <StyledInput type='number' name="numberOfGameBoards" value={formData.numberOfGameBoards} onChange={handleChange}></StyledInput>
+          <label><input type='checkbox' name="showTimer" value={formData.showTimer} onChange={handleChange}></input> Display Timer?</label>
+          <br></br>
+          <StyledSubmit type='submit'>Submit</StyledSubmit>
+        </StyledForm>
+      </Div>
+    </>
   )
 }
 

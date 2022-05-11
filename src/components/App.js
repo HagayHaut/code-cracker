@@ -28,6 +28,7 @@ function App() {
         <NavBar /> :
         <UsernameForm onUsernameSubmit={onUsernameSubmit}/>
       }
+      <br></br>
 
       <Switch>
         <Route path='/game' element={
@@ -36,6 +37,7 @@ function App() {
         <Route path='/settings' element={
           <>
             <Game username={username} settings={settings}/>
+        
             <SettingsForm onUsernameSubmit={onUsernameSubmit} setSettings={setSettings}/>
           </>
           }/>
@@ -43,8 +45,8 @@ function App() {
 
         <Route path='/help' element={
           <>
-            <Help />
             <Game username={username} settings={settings}/>
+            <Help />
           </> }/>
       </Switch>
 

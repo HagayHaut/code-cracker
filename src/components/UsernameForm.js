@@ -1,5 +1,36 @@
 import React, { useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
+// import Button from 'react-bootstrap/Button';
+
+
+const StyledForm = styled.form`
+  background: #102a43;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+`
+
+const StyledInput = styled.input`
+  background: #f0f4f8;
+  height: 22px;
+  color: #102a43;
+  font-weight: bolder;
+
+  &&:focus {
+    border: 2px solid #d9e2ec
+  }
+`
+
+const StyledSubmit = styled.input`
+  background: #829ab1;
+  padding: 5px 5px 5px 5px;
+  color: #102a43;
+  font-weight: bolder;
+`
 
 
 function UsernameForm({ onUsernameSubmit }) {
@@ -15,13 +46,14 @@ function UsernameForm({ onUsernameSubmit }) {
     }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <StyledForm onSubmit={handleSubmit}>
+      <br></br><br></br><br></br>
         <label />
-        <input value={nameInput} type='text' onChange={e => setNameInput(e.target.value)}></input>
-        <input type='submit' value='Submit'></input>  
+        <StyledInput value={nameInput} type='text' onChange={e => setNameInput(e.target.value)} placeholder='Enter username'></StyledInput>
+        <StyledSubmit type='submit' value='Submit'></StyledSubmit>  
 
 
-    </form>
+    </StyledForm>
   )
 }
 

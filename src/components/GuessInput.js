@@ -1,4 +1,16 @@
 import React, { useState } from 'react'
+import styled from 'styled-components';
+
+const StyledInput = styled.input`
+background: #f0f4f8;
+height: 22px;
+color: #102a43;
+font-weight: bolder;
+
+&&:focus {
+  border: 2px solid #d9e2ec
+}
+`
 
 function GuessInput({ addGuess, passwordLength }) {
 
@@ -29,7 +41,7 @@ function GuessInput({ addGuess, passwordLength }) {
   return (
     <>
     <form onSubmit={handleGuessSubmit}>
-        <input 
+        <StyledInput 
             type='number' 
             placeholder='Enter Guess' 
             onChange={e => setGuessInput(e.target.value)}
