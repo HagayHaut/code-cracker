@@ -58,10 +58,13 @@ function SettingsForm({setSettings}) {
         <StyledForm onSubmit={handleSubmit}>
           <label>Passcode Length</label>
           <StyledInput type='number' name="passwordLength" value={formData.passwordLength} onChange={handleChange}></StyledInput>
+          <br></br>
           <label>Max Number of Forced Guesses</label>
           <StyledInput type='number' name="randomEventsLimit" value={formData.randomEventsLimit} onChange={handleChange}></StyledInput>
+          <br></br>
           <label>Number of Game Boards</label>
           <StyledInput type='number' name="numberOfGameBoards" value={formData.numberOfGameBoards} onChange={handleChange}></StyledInput>
+          <br></br>
           <label><input type='checkbox' name="showTimer" value={formData.showTimer} onChange={handleChange}></input> Display Timer?</label>
           <br></br>
           <StyledSubmit type='submit'>Submit</StyledSubmit>
