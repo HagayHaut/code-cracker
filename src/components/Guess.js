@@ -40,6 +40,7 @@ function Guess({ guess, password, index, boardNum}) {
     return (
         <div> 
             <p className={guessClass}>{index+1}. {guess.guess} {multiplyString(hitIcon,hits)}{multiplyString(missIcon,misses)}</p>
+            {guess.random && <p className='random'>ಠﭛಠ</p>}
             {hits === 4 && 
                 <p>You won! It took you {index + 1} {index + 1 > 1 ? 'guesses' : 'guess'}!</p>}
             

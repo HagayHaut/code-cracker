@@ -12,7 +12,7 @@ font-weight: bolder;
 }
 `
 
-function GuessInput({ addGuess, passwordLength, guesses }) {
+function GuessInput({ addGuess, passwordLength, guesses, handleRandomEvent }) {
 
     const [guessInput, setGuessInput] = useState('');
     const [helpText, setHelpText] = useState('')
@@ -29,10 +29,9 @@ function GuessInput({ addGuess, passwordLength, guesses }) {
             // console.log('success')
             setGuessInput('')
             addGuess({guess: guessInput, random: false})
+            handleRandomEvent();
         }
-        else {
-            // console.log('else')
-        }
+        
     }
 
     function validateGuess(guess) {
