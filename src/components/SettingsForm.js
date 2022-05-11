@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -30,20 +30,22 @@ const StyledSubmit = styled.button`
   font-weight: bolder;
 `
 
-function SettingsForm({setSettings}) {
-  const [formData, setFormData] = useState({
-    passwordLength: 4,
-    randomEventsLimit: 0,
-    numberOfGameBoards: 1,
-    showTimer: false
-  })
+function SettingsForm({setSettings, settings}) {
+  const [formData, setFormData] = useState(settings)
 
   const history = useNavigate()
 
   function handleChange(e){
     const {name, value} = e.target
-    setFormData({...formData, [name]:value})
+    if(e.target.name === 'showTimer') {
+      setFormData({...formData, [name]: e.target.checked})
+    }
+    else {
+      setFormData({...formData, [name]:value})
+    }
   }
+
+  
 
   function handleSubmit(e){
     e.preventDefault()
@@ -65,7 +67,7 @@ function SettingsForm({setSettings}) {
           <label>Number of Game Boards</label>
           <StyledInput type='number' name="numberOfGameBoards" value={formData.numberOfGameBoards} onChange={handleChange}></StyledInput>
           <br></br>
-          <label><input type='checkbox' name="showTimer" value={formData.showTimer} onChange={handleChange}></input> Display Timer?</label>
+          <label><input type='checkbox' name="showTimer" checked={formData.showTimer} onChange={handleChange}></input> Display Timer?</label>
           <br></br>
           <StyledSubmit type='submit'>Submit</StyledSubmit>
         </StyledForm>

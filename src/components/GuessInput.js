@@ -12,7 +12,7 @@ font-weight: bolder;
 }
 `
 
-function GuessInput({ addGuess, passwordLength }) {
+function GuessInput({ addGuess, passwordLength, guesses }) {
 
     const [guessInput, setGuessInput] = useState('');
 
@@ -29,10 +29,16 @@ function GuessInput({ addGuess, passwordLength }) {
     }
 
     function validateGuess(guess) {
+        console.log(passwordLength)
+        if(guesses.includes(guessInput)) {
+            return false;
+        }
         if(guess.split('').join('') !== Array.from(new Set(guess.split(''))).join('')) {
+            console.log('uniques')
             return false;
         }
         if(guess.length !== passwordLength) {
+            console.log('length')
             return false;
         }
         return true;
