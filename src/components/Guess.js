@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 function Guess({ guess, password, index, boardNum}) {
 
@@ -27,7 +27,7 @@ function Guess({ guess, password, index, boardNum}) {
         <li>  
             <p>{index+1}. {guess}, Hit: {hits}, Miss: {misses}</p>
             {hits === 4 && 
-                <p>You won! It took you {index + 1} guesses!</p>}
+                <p>You won! It took you {index + 1} {index + 1 > 1 ? 'guesses' : 'guess'}!</p>}
             
         </li>
     )

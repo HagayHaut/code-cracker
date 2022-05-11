@@ -15,6 +15,7 @@ font-weight: bolder;
 function GuessInput({ addGuess, passwordLength, guesses }) {
 
     const [guessInput, setGuessInput] = useState('');
+    const [helpText, setHelpText] = useState('')
 
     function handleGuessSubmit(e) {
         e.preventDefault();
@@ -29,18 +30,26 @@ function GuessInput({ addGuess, passwordLength, guesses }) {
     }
 
     function validateGuess(guess) {
-        console.log(passwordLength)
-        if(guesses.includes(guessInput)) {
+
+
+        if(guesses.includes(guessInput)){
+            setHelpText("Uh oh, looks like you've guessed that already.")
             return false;
         }
         if(guess.split('').join('') !== Array.from(new Set(guess.split(''))).join('')) {
-            console.log('uniques')
+            setHelpText('Guesses may not contain repeated digits.')
             return false;
         }
         if(guess.length !== passwordLength) {
-            console.log('length')
+            setHelpText(`Your guess isn't the same length as the passcode (${passwordLength}).`)
             return false;
         }
+        if(!parseInt(guess)){
+            setHelpText('Uh oh, looks like your guess isn\'t a number.')
+
+            return false;
+        }
+        setHelpText('')
         return true;
     }
 
@@ -48,11 +57,15 @@ function GuessInput({ addGuess, passwordLength, guesses }) {
     <>
     <form onSubmit={handleGuessSubmit}>
         <StyledInput 
-            type='number' 
+
+            id='guess-input'
+            type='text' 
             placeholder='Enter Guess' 
             onChange={e => setGuessInput(e.target.value)}
             value={guessInput}
         />
+        {helpText && 
+            <p>{helpText}</p>}
         {/* <input type='submit'/> */}
     </form>
     </>
