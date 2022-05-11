@@ -34,13 +34,15 @@ function Game({ username, settings, setSettings }) {
       }
   })
 
-  if(randomEventsCount < settings.randomEventsLimit) {
-    const nums = ['1','2','3','4','5','6','7','8','9','0'];
-    const rand = Math.floor(Math.random() * 10)
-    if(rand === 1) {
-      setRandomEventsCount(pre => pre + 1)
-      const forceGuess = shuffle(nums).slice(0, settings.passwordLength).join('')
-      addGuess({guess: forceGuess, random: true})
+  function handleRandomEvent() {
+    if(randomEventsCount < settings.randomEventsLimit) {
+      const nums = ['1','2','3','4','5','6','7','8','9','0'];
+      const rand = Math.floor(Math.random() * 10)
+      if(rand === 1) {
+        setRandomEventsCount(pre => pre + 1)
+        const forceGuess = shuffle(nums).slice(0, settings.passwordLength).join('')
+        addGuess({guess: forceGuess, random: true})
+      }
     }
   }
  
@@ -122,7 +124,7 @@ function Game({ username, settings, setSettings }) {
       <StyledButton onClick={()=>handleNewGame()}>New Game</StyledButton>
       <br></br>
       <br></br>
-      <GuessInput guesses={guesses} passwordLength={parseInt(passwordLength)} addGuess={addGuess}/>
+      <GuessInput handleRandomEvent={handleRandomEvent} guesses={guesses} passwordLength={parseInt(passwordLength)} addGuess={addGuess}/>
       <br></br>
       <div className='inline-block'>
         <div className='board-container'>

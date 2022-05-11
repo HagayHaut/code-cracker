@@ -36,9 +36,9 @@ body {
 
 .board {
   display: inline-block;
-  background-color: #f0f4f8;
+  background-color: #cfd9eb;
   border-radius: 15px;
-  color: #102a43;
+  color: #4b1d3f;
   padding: 1rem;
   vertical-align: middle;
   border: 2px solid #102a43;
@@ -57,8 +57,8 @@ body {
   padding: 7px;
   color: #4b1d3f;
   border: 2px solid #4b1d3f;
-  border-radius: 10px;
-  background-color: #e47c62;
+  border-radius: 45px;
+  background-color: #f9cb9c;
   box-shadow: 0 6px 6px 9 #9fb3c8;
   width: 50%;
   display: inline-block;
