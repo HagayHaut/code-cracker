@@ -8,12 +8,16 @@ function Leaderboard(){
         .then(r => r.json())
         .then(setScores)
     },[])
+
+    function toTimeFormat(time) {
+        return `${Math.floor(time / 60)}:${time % 60 < 10 ? '0' + time % 60: time % 60}`
+    }
     
     const scoresToDisplay = scores.sort((a, b) => a.score - b.score)
 
-    function Score({username, score, position}){
+    function Score({username, score, position, time}){
         return <li>
-            <p>{position}. {username}: {score} {score > 1 ? 'tries' : 'try'}</p>
+            <p>{position}. {username}: {score} {score > 1 ? 'tries' : 'try'} {toTimeFormat(time)}</p>
         </li>
     }
 
