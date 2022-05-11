@@ -13,7 +13,7 @@ function Leaderboard(){
 
     function Score({username, score, position}){
         return <li>
-            <p>{position}. {username}: {score} tries</p>
+            <p>{position}. {username}: {score} {score > 1 ? 'tries' : 'try'}</p>
         </li>
     }
 
