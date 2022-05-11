@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 
 const StyledForm = styled.form`
-  background: #102a43;
   position: fixed;
   padding: 0;
   margin: 0;
@@ -16,7 +15,7 @@ const StyledForm = styled.form`
 
 const StyledInput = styled.input`
   background: #f0f4f8;
-  height: 25px;
+  height: 27px;
   color: #102a43;
   font-weight: bolder;
 
@@ -26,9 +25,9 @@ const StyledInput = styled.input`
 `
 
 const StyledSubmit = styled.input`
-  background: #829ab1;
+  background: #0E7C7B;
   padding: 5px 5px 5px 5px;
-  color: #102a43;
+  color: white;
   font-weight: bolder;
 `
 
