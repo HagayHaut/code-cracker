@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       { username ? 
         <NavBar /> :
-        <UsernameForm onUsernameSubmit={onUsernameSubmit}/>
+        <UsernameForm onUsernameSubmit={onUsernameSubmit} setSettings={setSettings}/>
       }
       <br></br>
 
@@ -38,7 +38,7 @@ function App() {
           <>
             <Game username={username} settings={settings}/>
         
-            <SettingsForm onUsernameSubmit={onUsernameSubmit} setSettings={setSettings}/>
+            <SettingsForm settings={settings} onUsernameSubmit={onUsernameSubmit} setSettings={setSettings}/>
           </>
           }/>
         <Route path='/leaderboard' element={<Leaderboard />}/>

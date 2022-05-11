@@ -46,7 +46,8 @@ function GameBoard({ game, guesses, addGuess, username , shuffle, settings, hand
       settings: settings,
       password: password,
       guesses: guesses,
-      time: timer
+      time: timer,
+      date: new Date()
     }
     fetch('http://localhost:4000/games',{
       method: "POST",

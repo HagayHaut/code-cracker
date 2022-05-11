@@ -33,7 +33,7 @@ const StyledSubmit = styled.input`
 `
 
 
-function UsernameForm({ onUsernameSubmit }) {
+function UsernameForm({ onUsernameSubmit, setSettings }) {
 
     const [nameInput, setNameInput] = useState('')
 
@@ -41,6 +41,16 @@ function UsernameForm({ onUsernameSubmit }) {
 
     function handleSubmit(e) {
       e.preventDefault()
+      fetch('http://localhost:4000/games')
+        .then(r => r.json())
+        .then(d => {
+          const lastGame = d.reverse().find(game => {
+            return game.username === nameInput
+          })
+          if(lastGame) {
+            setSettings(lastGame.settings)
+          }
+        })
       onUsernameSubmit(nameInput)
       history('/settings')
     }
