@@ -16,7 +16,7 @@ const StyledForm = styled.form`
 
 const StyledInput = styled.input`
   background: #f0f4f8;
-  height: 22px;
+  height: 25px;
   color: #102a43;
   font-weight: bolder;
 
