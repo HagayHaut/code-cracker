@@ -28,7 +28,7 @@ function GuessInput({ addGuess, passwordLength, guesses }) {
         if(validateGuess(guessInput)) {
             // console.log('success')
             setGuessInput('')
-            addGuess(guessInput)
+            addGuess({guess: guessInput, random: false})
         }
         else {
             // console.log('else')

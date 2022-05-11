@@ -70,6 +70,70 @@
       "time": 332,
       "date": "2022-05-16T14:35:50.202Z",
       "id": 3
+    },
+    {
+      "username": "hagay",
+      "score": 12,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": "4",
+        "numberOfGameBoards": "1",
+        "showTimer": false
+      },
+      "password": "6708",
+      "guesses": [
+        {
+          "guess": "1234",
+          "random": false
+        },
+        {
+          "guess": "5678",
+          "random": false
+        },
+        {
+          "guess": "9273",
+          "random": true
+        },
+        {
+          "guess": "4392",
+          "random": true
+        },
+        {
+          "guess": "9078",
+          "random": false
+        },
+        {
+          "guess": "2951",
+          "random": true
+        },
+        {
+          "guess": "8109",
+          "random": true
+        },
+        {
+          "guess": "3487",
+          "random": false
+        },
+        {
+          "guess": "9806",
+          "random": false
+        },
+        {
+          "guess": "7806",
+          "random": false
+        },
+        {
+          "guess": "7860",
+          "random": false
+        },
+        {
+          "guess": "6708",
+          "random": false
+        }
+      ],
+      "time": 155,
+      "date": "2022-05-11T18:47:59.434Z",
+      "id": 4
     }
   ]
 }
