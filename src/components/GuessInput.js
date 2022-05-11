@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components';
 
 const StyledInput = styled.input`
@@ -16,6 +16,12 @@ function GuessInput({ addGuess, passwordLength, guesses }) {
 
     const [guessInput, setGuessInput] = useState('');
     const [helpText, setHelpText] = useState('')
+
+    const guessInputRef = useRef(null);
+
+    useEffect(() => {
+        guessInputRef.current.focus()
+    }, [])
 
     function handleGuessSubmit(e) {
         e.preventDefault();
@@ -57,7 +63,7 @@ function GuessInput({ addGuess, passwordLength, guesses }) {
     <>
     <form onSubmit={handleGuessSubmit}>
         <StyledInput 
-
+            ref={guessInputRef}
             id='guess-input'
             type='text' 
             placeholder='Enter Guess' 
