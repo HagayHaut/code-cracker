@@ -16,7 +16,10 @@ const StyledInput = styled.input`
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  
+  border: 2px solid black;
+  padding: 20px;
+  background-color: #cfd9eb;
+  color: #4b1d3f;
 `
 
 const Div = styled.div`
@@ -24,9 +27,9 @@ const Div = styled.div`
 `
 
 const StyledSubmit = styled.button`
-  background: #829ab1;
+  background: #0e7c7b;
   padding: 5px 5px 5px 5px;
-  color: #102a43;
+  color: white;
   font-weight: bolder;
 `
 
@@ -54,10 +57,10 @@ function SettingsForm({setSettings, settings}) {
   }
 
   return (
-    <>
-      <h3>Game Settings</h3>
       <Div>
+        <br></br>
         <StyledForm onSubmit={handleSubmit}>
+          <h3>Game Settings</h3>
           <label>Passcode Length</label>
           <StyledInput type='number' name="passwordLength" value={formData.passwordLength} onChange={handleChange}></StyledInput>
           <br></br>
@@ -72,7 +75,6 @@ function SettingsForm({setSettings, settings}) {
           <StyledSubmit type='submit'>Submit</StyledSubmit>
         </StyledForm>
       </Div>
-    </>
   )
 }
 
