@@ -50,6 +50,39 @@
       ],
       "time": 68,
       "id": 3
+    },
+    {
+      "username": "hagay",
+      "score": 1,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": 0,
+        "numberOfGameBoards": 1,
+        "showTimer": false
+      },
+      "password": "7403",
+      "guesses": [
+        "7403"
+      ],
+      "time": 60,
+      "id": 4
+    },
+    {
+      "username": "hagay",
+      "score": 2,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": 0,
+        "numberOfGameBoards": 1,
+        "showTimer": false
+      },
+      "password": "4870",
+      "guesses": [
+        "1234",
+        "4870"
+      ],
+      "time": 38,
+      "id": 5
     }
   ]
 }

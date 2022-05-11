@@ -25,7 +25,7 @@ function Guess({ guess, password, index, boardNum}) {
 
     return (
         <li>  
-            <p>{index+1}. Guess: {guess}, Hits: {hits}, Misses: {misses}</p>
+            <p>{index+1}. {guess}, Hit: {hits}, Miss: {misses}</p>
             {hits === 4 && 
                 <p>You won! It took you {index + 1} guesses!</p>}
             

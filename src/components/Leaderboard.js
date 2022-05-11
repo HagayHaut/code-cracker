@@ -11,17 +11,17 @@ function Leaderboard(){
     
     const scoresToDisplay = scores.sort((a, b) => a.score - b.score)
 
-    function Score({username, score}){
+    function Score({username, score, position}){
         return <li>
-            <p>{username}: {score}</p>
+            <p>{position}. {username}: {score} tries</p>
         </li>
     }
 
-    return <ol>
-        {scoresToDisplay.map(score => {
-            return <Score key={score.id} {...score}/>
+    return <ul>
+        {scoresToDisplay.map((score,i) => {
+            return <Score key={score.id} position={i+1} {...score}/>
         })}
-    </ol>
+    </ul>
 }
 
 export default Leaderboard;
