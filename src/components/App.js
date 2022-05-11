@@ -35,9 +35,7 @@ function App() {
             <Game username={username} settings={settings} />}/>
 
         <Route path='/settings' element={
-          <>
-            <Game username={username} settings={settings}/>
-        
+          <>  
             <SettingsForm settings={settings} onUsernameSubmit={onUsernameSubmit} setSettings={setSettings}/>
           </>
           }/>

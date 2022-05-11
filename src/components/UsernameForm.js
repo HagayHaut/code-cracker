@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 // import Button from 'react-bootstrap/Button';
@@ -38,6 +38,11 @@ function UsernameForm({ onUsernameSubmit, setSettings }) {
     const [nameInput, setNameInput] = useState('')
 
     let history = useNavigate()
+    const nameInputRef = useRef(null)
+
+    useEffect(() => {
+      nameInputRef.current.focus();
+    }, [])
 
     function handleSubmit(e) {
       e.preventDefault()
@@ -52,14 +57,14 @@ function UsernameForm({ onUsernameSubmit, setSettings }) {
           }
         })
       onUsernameSubmit(nameInput)
-      history('/settings')
+      history('/game')
     }
 
   return (
     <StyledForm onSubmit={handleSubmit}>
       <br></br><br></br><br></br>
         <label />
-        <StyledInput value={nameInput} type='text' onChange={e => setNameInput(e.target.value)} placeholder='Enter username'></StyledInput>
+        <StyledInput ref={nameInputRef} value={nameInput} type='text' onChange={e => setNameInput(e.target.value)} placeholder='Enter username'></StyledInput>
         <StyledSubmit type='submit' value='Submit'></StyledSubmit>  
 
 
