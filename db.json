@@ -2,7 +2,7 @@
   "games": [
     {
       "username": "johnny",
-      "score": 6,
+      "score": 12,
       "settings": {
         "passwordLength": 4,
         "randomEventsLimit": 0,
@@ -43,7 +43,7 @@
         "5024"
       ],
       "time": 179,
-      "date": "2022-05-11T14:33:14.477Z",
+      "date": "2022-05-12T14:33:14.477Z",
       "id": 2
     },
     {
@@ -68,7 +68,7 @@
         "9824"
       ],
       "time": 332,
-      "date": "2022-05-11T14:35:50.202Z",
+      "date": "2022-05-16T14:35:50.202Z",
       "id": 3
     }
   ]

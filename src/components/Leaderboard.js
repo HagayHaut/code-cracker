@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+// import Table from 'react-bootstrap/Table';
 
 
 function Leaderboard(){
     const [scores, setScores] = useState([])
+    const [sortBy, setSortBy] = useState('score')
 
     useEffect(() => {
         fetch('http://localhost:4000/games')
@@ -18,14 +20,21 @@ function Leaderboard(){
         return `${dateStr.substr(5,2)}/${dateStr.substr(8,2)}/${dateStr.substr(0,4)}`
     }
     
-    const scoresToDisplay = scores.sort((a, b) => a.score - b.score)
+    let scoresToDisplay;
+
+    if(sortBy === 'date') {
+      scoresToDisplay = scores.sort((a, b) => a[sortBy] > b[sortBy] ? -1 : 1)
+    }
+    else {
+      scoresToDisplay = scores.sort((a, b) => a[sortBy] < b[sortBy] ? -1 : 1)
+    }
 
     function Score({username, score, position, time, date}){
         return <tr>
-            <td className="table-data">{username}</td>
-            <td className="table-data">{score} {score > 1 ? 'Guesses' : 'Guess'}</td>
-            <td className="table-data">{toTimeFormat(time)}</td>
-            <td className="table-data">{toDateFormat(date)}</td>
+            <td>{username}</td>
+            <td>{score} {score > 1 ? 'Guesses' : 'Guess'}</td>
+            <td>{toTimeFormat(time)}</td>
+            <td>{toDateFormat(date)}</td>
             {/* <p>{position}. {username}: {score} {score > 1 ? 'tries' : 'try'} {toTimeFormat(time)} {toDateFormat(date)}</p> */}
         </tr>
     }
@@ -36,20 +45,20 @@ function Leaderboard(){
             return <Score key={score.id} position={i+1} {...score}/>
         })}
     </ul> */}
-    <table className="table">
+    <table className='table'>
         <tbody>
           <tr>
             <th>
-              <h3 className="table-header">Username</h3>
+              <h3>Username</h3>
             </th>
-            <th>
-              <h3 className="table-header">Guess</h3>
+            <th onClick={e => setSortBy('score')} className='sort'>
+              <h3>Guess</h3>
             </th>
-            <th>
-              <h3 className="table-header">Time</h3>
+            <th onClick={e => setSortBy('time')} className='sort'>
+              <h3>Time</h3>
             </th>
-            <th>
-              <h3 className="table-header">Date</h3>
+            <th onClick={e => setSortBy('date')} className='sort'>
+              <h3>Date</h3>
             </th>
           </tr>
 
