@@ -3,26 +3,15 @@ import Guess from './Guess';
  
 function GameBoard({ game, guesses, addGuess, username , shuffle, settings, handleSolved, timer}) {
   const {password, gameBoardNum, isSolved} = game
-  const {randomEventsLimit} = settings
  
-  const [randomEventsCount, setRandomEventsCount] = useState(0)
- 
- 
-  if(randomEventsCount < randomEventsLimit) {
-    const nums = ['1','2','3','4','5','6','7','8','9','0'];
-    const rand = Math.floor(Math.random() * 10)
-    if(rand === 1) {
-      setRandomEventsCount(pre => pre + 1)
-      const forceGuess = shuffle(nums).slice(0, password.length).join('')
-      addGuess(forceGuess)
-    }
-  }
+
+  const guessArr = guesses.map(guess => guess.guess)
  
   let displayGuesses = []
   function checkWin() {
     renderDisplayGuesses()
  
-    if (!isSolved && guesses.includes(password)) {
+    if (!isSolved && guessArr.includes(password)) {
       handleBoardWin()
     }
   }
@@ -30,9 +19,9 @@ function GameBoard({ game, guesses, addGuess, username , shuffle, settings, hand
   checkWin()
  
   function renderDisplayGuesses(){
-    for(let i = 0; i < guesses.length; i++) {
+    for(let i = 0; i < guessArr.length; i++) {
       displayGuesses.push(guesses[i]);
-      if(guesses[i] === password) break;
+      if(guessArr[i] === password) break;
     }
   }
  
@@ -77,9 +66,9 @@ function GameBoard({ game, guesses, addGuess, username , shuffle, settings, hand
     <div className="board">Board {gameBoardNum}
     {/* {password} */}
     {/* {isSolved? 'solved':'inprogress'} */}
-      <ul style={{listStyleType: 'none'}}>
+      <div style={{listStyleType: 'none'}}>
           {guessList}
-      </ul>
+      </div>
     </div>
   )
 }
