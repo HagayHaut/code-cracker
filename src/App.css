@@ -19,10 +19,17 @@ html {
   text-decoration: none;
 }
 
+.inline-block {
+  display: inline-block;
+  width: 90%;
+}
+
 .board-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  width: 100%;
+  align-self: center;
 }
 
 .board {
@@ -33,6 +40,8 @@ html {
   padding: 1rem;
   vertical-align: middle;
   border: 2px solid #102a43;
+  text-align: left;
+  width: 100%;
 }
 
 .navbar {
@@ -90,6 +99,14 @@ ul {
   color: #486581;
 }
 
+.random {
+  color: red;
+}
+
+.how-to {
+  text-align: left;
+  margin-left: 20px;
+}
 
 /* .table tbody tr.active-row {
   font-weight: bold;

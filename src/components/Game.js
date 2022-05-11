@@ -16,6 +16,7 @@ function Game({ username, settings, setSettings }) {
   const [guesses, setGuesses] = useState([]);
   const [games, setGames] = useState([])
   const [timer, setTimer] = useState(0)
+  const [randomEventsCount, setRandomEventsCount] = useState(0)
  
   const allGamesIsSolved = games.every(game => game.isSolved)
  
@@ -32,6 +33,16 @@ function Game({ username, settings, setSettings }) {
         return () => {clearInterval(intervalId)}
       }
   })
+
+  if(randomEventsCount < settings.randomEventsLimit) {
+    const nums = ['1','2','3','4','5','6','7','8','9','0'];
+    const rand = Math.floor(Math.random() * 10)
+    if(rand === 1) {
+      setRandomEventsCount(pre => pre + 1)
+      const forceGuess = shuffle(nums).slice(0, settings.passwordLength).join('')
+      addGuess({guess: forceGuess, random: true})
+    }
+  }
  
   const convertTimer = `${Math.floor(timer / 60)}:${timer % 60 < 10 ? '0' + timer % 60: timer % 60}`
  
@@ -48,8 +59,8 @@ function Game({ username, settings, setSettings }) {
     setGames(arr)
   }
  
-  function addGuess(guess) {
-    setGuesses([...guesses, guess])
+  function addGuess(guessObj) {
+    setGuesses([...guesses, guessObj])
   }
  
   function handleSolved(boardNum){
@@ -101,7 +112,7 @@ function Game({ username, settings, setSettings }) {
     generateGames()
     loadGames()
     setTimer(0)
- 
+    setRandomEventsCount(0)
   }
  
   return (
@@ -114,8 +125,10 @@ function Game({ username, settings, setSettings }) {
       <br></br>
       {showTimer ? <p>{convertTimer}</p> : null}
       <br></br>
-      <div className='board-container'>
+      <div className='inline-block'>
+        <div className='board-container'>
         {arrGameBoards}
+        </div>
       </div>
     </div>
   )
