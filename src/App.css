@@ -53,3 +53,8 @@ html {
 ul {
   list-style: none;
 }
+
+
+.table, .table-header, .table-data{
+  border: 1px solid white
+}

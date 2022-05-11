@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+// import styled from "styled-components";
 
 function Leaderboard(){
     const [scores, setScores] = useState([])
