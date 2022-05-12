@@ -17,13 +17,14 @@ function Guess({ guessObj, password, index}) {
         return result;
     }
 
+
     function checkGuess() {
         for (let i = 0; i < password.length; i++){
-            if (guess[i] === password[i]){
+            if (guess.guess[i] === password[i]){
                 hits++
             }
             for (let j = 0; j < password.length; j++){
-                if(guess[i] === password[j]){
+                if(guess.guess[i] === password[j]){
                     misses++
                 }
             }
@@ -33,11 +34,13 @@ function Guess({ guessObj, password, index}) {
 
     checkGuess();
 
+
     const guessClass = random ? 'random' : '';
 
     return (
         <div> 
             <p className={guessClass}>{index+1}. {guess} {multiplyString(hitIcon,hits)}{multiplyString(missIcon,misses)} {random && 'ಠﭛಠ'}</p>
+
             {hits === 4 && 
                 <p>You won! It took you {index + 1} {index + 1 > 1 ? 'guesses' : 'guess'}!</p>}
             

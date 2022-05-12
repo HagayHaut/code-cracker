@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import Table from 'react-bootstrap/Table';
+
 
 function Leaderboard(){
     const [scores, setScores] = useState([])

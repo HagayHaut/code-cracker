@@ -17,7 +17,9 @@ function Game({ username, settings, setSettings }) {
   const [games, setGames] = useState([])
   const [timer, setTimer] = useState(0)
   const [randomEventsCount, setRandomEventsCount] = useState(0)
+
   const guessArr = guesses.map(guess => guess.guess)
+
  
   const allGamesIsSolved = games.every(game => game.isSolved)
  
@@ -125,7 +127,10 @@ function Game({ username, settings, setSettings }) {
       <StyledButton onClick={()=>handleNewGame()}>New Game</StyledButton>
       <br></br>
       <br></br>
+
       <GuessInput handleRandomEvent={handleRandomEvent} guesses={guessArr} passwordLength={parseInt(passwordLength)} addGuess={addGuess}/>
+
+
       <br></br>
       <div className='inline-block'>
         <div className='board-container'>

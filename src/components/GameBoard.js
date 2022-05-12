@@ -3,7 +3,9 @@ import Guess from './Guess';
  
 function GameBoard({ game, guesses, addGuess, username , shuffle, settings, handleSolved, timer}) {
   const {password, gameBoardNum, isSolved} = game
+
   const guessArr = guesses.map(guess => guess.guess)
+
   let displayGuesses = []
  
   function checkWin() {

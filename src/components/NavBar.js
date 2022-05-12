@@ -7,6 +7,7 @@ function NavBar() {
     <div className='inline-block'>
        <div className='navbar'>
         <NavLink className='link' to='/help'>
+
           <h3>❔</h3>
         </NavLink>
         <NavLink to='/game' className='link'>
@@ -17,6 +18,7 @@ function NavBar() {
         </NavLink>
         <NavLink to='/settings' className='link'>
           <h3>⚙️</h3>
+
         </NavLink>
       </div>
     </div>

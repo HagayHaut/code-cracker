@@ -13,6 +13,7 @@ font-weight: bolder;
 `
 
 function GuessInput({ addGuess, passwordLength, guesses, handleRandomEvent }) {
+
     const [guessInput, setGuessInput] = useState('');
     const [helpText, setHelpText] = useState('')
 
@@ -27,9 +28,11 @@ function GuessInput({ addGuess, passwordLength, guesses, handleRandomEvent }) {
         if(validateGuess(guessInput)) {
             // console.log('success')
             setGuessInput('')
+
             addGuess({guess: guessInput, random: false}) 
             handleRandomEvent();
         }   
+
     }
 
     function validateGuess(guess) {

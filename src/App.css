@@ -27,12 +27,14 @@ body {
 }
 
 .board-container {
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
   grid-gap: 1rem;
 
   width: 100%;
   align-self: center;
+
 
 }
 
@@ -120,7 +122,6 @@ th {
 
 .how-to h1 {
   text-decoration: underline;
-
 }
 
 /* .table tbody tr.active-row {
