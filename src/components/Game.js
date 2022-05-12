@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+
 import GameBoard from './GameBoard';
 import GuessInput from './GuessInput';
 import styled from 'styled-components';
@@ -8,6 +9,7 @@ const StyledButton = styled.button`
   padding: 5px 5px 5px 5px;
   color: white;
   font-weight: bolder;
+  cursor: pointer;
 `
  
 function Game({ username, settings, setSettings }) {

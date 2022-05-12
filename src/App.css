@@ -40,13 +40,19 @@ body {
 
 .board {
   display: inline-block;
-  background-color: #cfd9eb;
+  /* background-color: #cfd9eb; */
+  background-image: url(https://img.freepik.com/free-photo/bleached-wooden-textured-background_53876-138713.jpg?w=2000);
   border-radius: 15px;
   color: #4b1d3f;
   padding: 1rem;
   vertical-align: middle;
-  border: 2px solid #102a43;
+  box-shadow: 2px 3px 3px 2px rgba(75, 29, 63, 0.3);
+  /* border: 2px solid #102a43; */
   text-align: left;
+}
+
+.board:hover {
+  box-shadow: 3px 4px 4px 3px rgba(75, 29, 63, 0.4);
 }
 
 .navbar {
@@ -116,6 +122,7 @@ th {
 
 .how-to {
   text-align: left;
+  background-color: #cfd9eb;
   margin-left: 5%;
   margin-right: 5%;
   border: 2px solid #4b1d3f;

@@ -167,6 +167,286 @@
       "time": 48,
       "date": "2022-05-12T14:02:46.227Z",
       "id": 4
+    },
+    {
+      "username": "hagay",
+      "score": 10,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": 0,
+        "numberOfGameBoards": "1",
+        "showTimer": true
+      },
+      "password": "7640",
+      "guesses": [
+        {
+          "guess": "1234",
+          "random": false
+        },
+        {
+          "guess": "5678",
+          "random": false
+        },
+        {
+          "guess": "9012",
+          "random": false
+        },
+        {
+          "guess": "3912",
+          "random": false
+        },
+        {
+          "guess": "4056",
+          "random": false
+        },
+        {
+          "guess": "4057",
+          "random": false
+        },
+        {
+          "guess": "4058",
+          "random": false
+        },
+        {
+          "guess": "0476",
+          "random": false
+        },
+        {
+          "guess": "7604",
+          "random": false
+        },
+        {
+          "guess": "7640",
+          "random": false
+        }
+      ],
+      "time": 128,
+      "date": "2022-05-12T18:32:28.468Z",
+      "id": 5
+    },
+    {
+      "username": "hagay",
+      "score": 8,
+      "settings": {
+        "passwordLength": "4",
+        "randomEventsLimit": "0",
+        "numberOfGameBoards": "1",
+        "showTimer": false
+      },
+      "password": "5079",
+      "guesses": [
+        {
+          "guess": "1234",
+          "random": false
+        },
+        {
+          "guess": "5678",
+          "random": false
+        },
+        {
+          "guess": "5612",
+          "random": false
+        },
+        {
+          "guess": "7612",
+          "random": false
+        },
+        {
+          "guess": "5190",
+          "random": false
+        },
+        {
+          "guess": "5790",
+          "random": false
+        },
+        {
+          "guess": "5970",
+          "random": false
+        },
+        {
+          "guess": "5079",
+          "random": false
+        }
+      ],
+      "time": 75,
+      "date": "2022-05-12T18:41:23.348Z",
+      "id": 6
+    },
+    {
+      "username": "sdkjh",
+      "score": 11,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": 0,
+        "numberOfGameBoards": "1",
+        "showTimer": false
+      },
+      "password": "8159",
+      "guesses": [
+        {
+          "guess": "6421",
+          "random": false
+        },
+        {
+          "guess": "3578",
+          "random": false
+        },
+        {
+          "guess": "0964",
+          "random": false
+        },
+        {
+          "guess": "0921",
+          "random": false
+        },
+        {
+          "guess": "9025",
+          "random": false
+        },
+        {
+          "guess": "0135",
+          "random": false
+        },
+        {
+          "guess": "7830",
+          "random": false
+        },
+        {
+          "guess": "5193",
+          "random": false
+        },
+        {
+          "guess": "5301",
+          "random": false
+        },
+        {
+          "guess": "9158",
+          "random": false
+        },
+        {
+          "guess": "8159",
+          "random": false
+        }
+      ],
+      "time": 473,
+      "date": "2022-05-12T19:55:26.281Z",
+      "id": 7
+    },
+    {
+      "username": "sdkjh",
+      "score": 7,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": 0,
+        "numberOfGameBoards": "4",
+        "showTimer": false
+      },
+      "password": "1576",
+      "guesses": [
+        {
+          "guess": "1234",
+          "random": false
+        },
+        {
+          "guess": "5678",
+          "random": false
+        },
+        {
+          "guess": "9023",
+          "random": false
+        },
+        {
+          "guess": "5670",
+          "random": false
+        },
+        {
+          "guess": "5671",
+          "random": false
+        },
+        {
+          "guess": "1657",
+          "random": false
+        },
+        {
+          "guess": "1576",
+          "random": false
+        }
+      ],
+      "time": 423,
+      "date": "2022-05-12T20:04:20.813Z",
+      "id": 8
+    },
+    {
+      "username": "sdkjh",
+      "score": 6,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": "2",
+        "numberOfGameBoards": "1",
+        "showTimer": true
+      },
+      "password": "1639",
+      "guesses": [
+        {
+          "guess": "1234",
+          "random": false
+        },
+        {
+          "guess": "5678",
+          "random": false
+        },
+        {
+          "guess": "9034",
+          "random": false
+        },
+        {
+          "guess": "1074",
+          "random": false
+        },
+        {
+          "guess": "1938",
+          "random": false
+        },
+        {
+          "guess": "1639",
+          "random": false
+        }
+      ],
+      "time": 91,
+      "date": "2022-05-12T20:06:33.602Z",
+      "id": 9
+    },
+    {
+      "username": "sofia",
+      "score": 4,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": 0,
+        "numberOfGameBoards": 1,
+        "showTimer": false
+      },
+      "password": "2378",
+      "guesses": [
+        {
+          "guess": "1234",
+          "random": false
+        },
+        {
+          "guess": "5678",
+          "random": false
+        },
+        {
+          "guess": "2178",
+          "random": false
+        },
+        {
+          "guess": "2378",
+          "random": false
+        }
+      ],
+      "time": 22,
+      "date": "2022-05-12T20:12:29.337Z",
+      "id": 10
     }
   ]
 }
