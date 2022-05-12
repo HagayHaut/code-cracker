@@ -8,16 +8,16 @@ function NavBar() {
        <div className='navbar'>
         <NavLink className='link' to='/help'>
 
-          <h3>❔</h3>
+          <h3><i class="fa fa-question-circle" aria-hidden="true"></i></h3>
         </NavLink>
         <NavLink to='/game' className='link'>
-          <h3>🏠</h3>
+          <h3><i class="fa fa-home" aria-hidden="true"></i></h3>
         </NavLink>
         <NavLink to='/leaderboard' className='link'>
-          <h3>🥇</h3>
+          <h3><i class="fa fa-trophy" aria-hidden="true"></i></h3>
         </NavLink>
         <NavLink to='/settings' className='link'>
-          <h3>⚙️</h3>
+          <h3><i class="fa fa-cog" aria-hidden="true"></i></h3>
 
         </NavLink>
       </div>
