@@ -3,14 +3,14 @@ import Guess from './Guess';
  
 function GameBoard({ game, guesses, addGuess, username , shuffle, settings, handleSolved, timer}) {
   const {password, gameBoardNum, isSolved} = game
- 
 
   const guessArr = guesses.map(guess => guess.guess)
- 
+
   let displayGuesses = []
+ 
   function checkWin() {
     renderDisplayGuesses()
- 
+
     if (!isSolved && guessArr.includes(password)) {
       handleBoardWin()
     }
@@ -53,8 +53,8 @@ function GameBoard({ game, guesses, addGuess, username , shuffle, settings, hand
   const guessList = displayGuesses.map((guess,i) => {
     return <Guess
             index={i}
-            key={guess}
-            guess={guess}
+            key={guess.guess}
+            guessObj={guess}
             password={password}
             boardNum={gameBoardNum}
           />

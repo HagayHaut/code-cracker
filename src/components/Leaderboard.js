@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import Table from 'react-bootstrap/Table';
 
 
 function Leaderboard(){
@@ -35,16 +34,11 @@ function Leaderboard(){
             <td>{score} {score > 1 ? 'Guesses' : 'Guess'}</td>
             <td>{toTimeFormat(time)}</td>
             <td>{toDateFormat(date)}</td>
-            {/* <p>{position}. {username}: {score} {score > 1 ? 'tries' : 'try'} {toTimeFormat(time)} {toDateFormat(date)}</p> */}
         </tr>
     }
 
     return <>
-    {/* <ul>
-        {scoresToDisplay.map((score,i) => {
-            return <Score key={score.id} position={i+1} {...score}/>
-        })}
-    </ul> */}
+
     <table className='table'>
         <tbody>
           <tr>

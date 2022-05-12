@@ -7,7 +7,7 @@ function Help() {
   return (
     <div className='how-to'>
       {/* <p>Guessing a random 4-digit number is difficult so I will prepare you hints for solving the passcode.</p> */}
-      <h1>How to play:</h1>
+      <h1>How to play</h1>
       <p>Guess the passcode in as few tries possible. <br></br> 
         Each passcode will contain unique numbers only. <br></br> 
         After each guess, you will be given number of hits and misses for that guess. <br></br> 

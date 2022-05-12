@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Guess({ guess, password, index, boardNum}) {
+function Guess({ guessObj, password, index}) {
+    const {guess, random} = guessObj
 
     let hits = 0;
     let misses = 0;
@@ -15,7 +16,7 @@ function Guess({ guess, password, index, boardNum}) {
         }
         return result;
     }
-    // console.log(boardNum, guess)
+
 
     function checkGuess() {
         for (let i = 0; i < password.length; i++){
@@ -33,14 +34,13 @@ function Guess({ guess, password, index, boardNum}) {
 
     checkGuess();
 
-    const guessClass = guess.random ? 'random' : '';
 
-
+    const guessClass = random ? 'random' : '';
 
     return (
         <div> 
-            <p className={guessClass}>{index+1}. {guess.guess} {multiplyString(hitIcon,hits)}{multiplyString(missIcon,misses)}</p>
-            {guess.random && <p className='random'>ಠﭛಠ</p>}
+            <p className={guessClass}>{index+1}. {guess} {multiplyString(hitIcon,hits)}{multiplyString(missIcon,misses)} {random && 'ಠﭛಠ'}</p>
+
             {hits === 4 && 
                 <p>You won! It took you {index + 1} {index + 1 > 1 ? 'guesses' : 'guess'}!</p>}
             

@@ -27,11 +27,15 @@ body {
 }
 
 .board-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  grid-gap: 1rem;
+
   width: 100%;
   align-self: center;
+
+
 }
 
 .board {
@@ -43,7 +47,6 @@ body {
   vertical-align: middle;
   border: 2px solid #102a43;
   text-align: left;
-  width: 100%;
 }
 
 .navbar {
@@ -113,7 +116,12 @@ th {
 
 .how-to {
   text-align: left;
-  margin-left: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.how-to h1 {
+  text-decoration: underline;
 }
 
 /* .table tbody tr.active-row {
