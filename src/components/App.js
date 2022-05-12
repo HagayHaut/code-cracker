@@ -31,7 +31,7 @@ function App() {
       <br></br>
 
       <Switch>
-        <Route path='/game' element={
+        <Route path='/home' element={
             <Game username={username} settings={settings} />}/>
 
         <Route path='/settings' element={
