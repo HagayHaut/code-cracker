@@ -29,7 +29,7 @@ function Help() {
 
       </ul>
       <h3 style={{textDecoration: 'underline'}}>Ahh! Random Guesses!</h3>
-      <p>To ~help~ you along, this game will auto-guess for you as you play. You can tell an auto-guess from a normal guess by the red color. You can adjust the frequency of auto-guesses in Settings <i class="fa fa-cog" aria-hidden="true"></i>.</p>
+      <p>To ~help~ you along, this game will auto-guess for you as you play. You can tell an auto-guess from a normal guess by the red color. Each turn has a 10% change of being an auto-guess! You can adjust the maximum number of auto-guesses in Settings <i class="fa fa-cog" aria-hidden="true"></i>.</p>
     </div>
   )
 }
