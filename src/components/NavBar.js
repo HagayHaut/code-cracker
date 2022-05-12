@@ -10,7 +10,7 @@ function NavBar() {
 
           <h3><i class="fa fa-question-circle" aria-hidden="true"></i></h3>
         </NavLink>
-        <NavLink to='/game' className='link'>
+        <NavLink to='/home' className='link'>
           <h3><i class="fa fa-home" aria-hidden="true"></i></h3>
         </NavLink>
         <NavLink to='/leaderboard' className='link'>

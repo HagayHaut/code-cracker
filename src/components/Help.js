@@ -12,7 +12,7 @@ function Help() {
         Each passcode will contain unique numbers only. <br></br> 
         After each guess, you will be given number of hits and misses for that guess. <br></br> 
         Hit (🟢) represent the number of guessed digits in the correct position. <br></br> 
-        Miss (🟡) represent the number of guessed digits in an incorrect position. </p>
+        Miss (🟡) represent the number of guessed digits present in the passcode, but in an incorrect position. </p>
 
       <ul><h3>Example: Passcode is '1836'</h3>
         <li><h4>1234 will result in 🟢🟢 (1 and 3 are hits)</h4></li>
