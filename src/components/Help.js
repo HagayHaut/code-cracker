@@ -14,7 +14,7 @@ function Help() {
         Hit (🟢) represent the number of guessed digits in the correct position. <br></br> 
         Miss (🟡) represent the number of guessed digits present in the passcode, but in an incorrect position. </p>
 
-      <ul><h3>Example: Passcode is '1836'</h3>
+      <ul><h3 style={{textDecoration: 'underline'}}>Example: Passcode is '1836'</h3>
         <li><h4>1234 will result in 🟢🟢 (1 and 3 are hits)</h4></li>
           
         <li><h4>4567 will result in 🟡 (6 is a miss)</h4></li>
@@ -28,7 +28,7 @@ function Help() {
         </li>
 
       </ul>
-      <h3>Ahh! Random Guesses!</h3>
+      <h3 style={{textDecoration: 'underline'}}>Ahh! Random Guesses!</h3>
       <p>To ~help~ you along, this game will auto-guess for you as you play. You can tell an auto-guess from a normal guess by the red color. You can adjust the frequency of auto-guesses in Settings <i class="fa fa-cog" aria-hidden="true"></i>.</p>
     </div>
   )
