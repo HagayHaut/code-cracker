@@ -29,7 +29,7 @@ function Help() {
 
       </ul>
       <h3>Ahh! Random Guesses!</h3>
-      <p>To ~help~ you along, this game will auto-guess for you as you play. You can tell an auto-guess from a normal guess by the red color. You can adjust the frequency of auto-guesses in Settings.</p>
+      <p>To ~help~ you along, this game will auto-guess for you as you play. You can tell an auto-guess from a normal guess by the red color. You can adjust the frequency of auto-guesses in Settings <i class="fa fa-cog" aria-hidden="true"></i>.</p>
     </div>
   )
 }

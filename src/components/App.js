@@ -44,6 +44,7 @@ function App() {
         <Route path='/help' element={
           <>
             <Game username={username} settings={settings}/>
+            <br></br>
             <Help />
           </> }/>
       </Switch>

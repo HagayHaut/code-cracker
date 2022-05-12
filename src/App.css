@@ -118,6 +118,8 @@ th {
   text-align: left;
   margin-left: 5%;
   margin-right: 5%;
+  border: 2px solid #4b1d3f;
+  padding: 20px;
 }
 
 .how-to h1 {
