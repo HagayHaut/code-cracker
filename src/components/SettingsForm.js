@@ -60,6 +60,8 @@ function SettingsForm({setSettings, settings}) {
   return (
       <Div>
         <br></br>
+        <br></br>
+        <br></br>
         <StyledForm onSubmit={handleSubmit}>
           <h3>Game Settings</h3>
           <label>Passcode Length</label>
@@ -72,7 +74,7 @@ function SettingsForm({setSettings, settings}) {
             onChange={handleChange}>  
           </StyledInput>
           <br></br>
-          <label>Max Number of Forced Guesses</label>
+          <label>Max Number of Auto-Guesses</label>
           <StyledInput 
             min='0'
             max='10'
