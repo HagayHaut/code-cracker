@@ -31,7 +31,6 @@ function GuessInput({ addGuess, passwordLength, guesses, handleRandomEvent }) {
             addGuess({guess: guessInput, random: false}) 
             handleRandomEvent();
         }   
-
     }
 
     function validateGuess(guess) {
