@@ -31,6 +31,7 @@ const StyledSubmit = styled.button`
   padding: 5px 5px 5px 5px;
   color: white;
   font-weight: bolder;
+  cursor: pointer;
 `
 
 function SettingsForm({setSettings, settings}) {
@@ -62,13 +63,34 @@ function SettingsForm({setSettings, settings}) {
         <StyledForm onSubmit={handleSubmit}>
           <h3>Game Settings</h3>
           <label>Passcode Length</label>
-          <StyledInput type='number' name="passwordLength" value={formData.passwordLength} onChange={handleChange}></StyledInput>
+          <StyledInput 
+            type='number' 
+            min='4'
+            max='8'
+            name="passwordLength" 
+            value={formData.passwordLength} 
+            onChange={handleChange}>  
+          </StyledInput>
           <br></br>
           <label>Max Number of Forced Guesses</label>
-          <StyledInput type='number' name="randomEventsLimit" value={formData.randomEventsLimit} onChange={handleChange}></StyledInput>
+          <StyledInput 
+            min='0'
+            max='10'
+            type='number' 
+            name="randomEventsLimit" 
+            value={formData.randomEventsLimit} 
+            onChange={handleChange}>
+          </StyledInput>
           <br></br>
           <label>Number of Game Boards</label>
-          <StyledInput type='number' name="numberOfGameBoards" value={formData.numberOfGameBoards} onChange={handleChange}></StyledInput>
+          <StyledInput 
+            min='1'
+            max='8'
+            type='number' 
+            name="numberOfGameBoards" 
+            value={formData.numberOfGameBoards} 
+            onChange={handleChange}>
+          </StyledInput>
           <br></br>
           <label><input type='checkbox' name="showTimer" checked={formData.showTimer} onChange={handleChange}></input> Display Timer?</label>
           <br></br>

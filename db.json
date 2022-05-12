@@ -167,6 +167,110 @@
       "time": 48,
       "date": "2022-05-12T14:02:46.227Z",
       "id": 4
+    },
+    {
+      "username": "hagay",
+      "score": 10,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": 0,
+        "numberOfGameBoards": "1",
+        "showTimer": true
+      },
+      "password": "7640",
+      "guesses": [
+        {
+          "guess": "1234",
+          "random": false
+        },
+        {
+          "guess": "5678",
+          "random": false
+        },
+        {
+          "guess": "9012",
+          "random": false
+        },
+        {
+          "guess": "3912",
+          "random": false
+        },
+        {
+          "guess": "4056",
+          "random": false
+        },
+        {
+          "guess": "4057",
+          "random": false
+        },
+        {
+          "guess": "4058",
+          "random": false
+        },
+        {
+          "guess": "0476",
+          "random": false
+        },
+        {
+          "guess": "7604",
+          "random": false
+        },
+        {
+          "guess": "7640",
+          "random": false
+        }
+      ],
+      "time": 128,
+      "date": "2022-05-12T18:32:28.468Z",
+      "id": 5
+    },
+    {
+      "username": "hagay",
+      "score": 8,
+      "settings": {
+        "passwordLength": "4",
+        "randomEventsLimit": "0",
+        "numberOfGameBoards": "1",
+        "showTimer": false
+      },
+      "password": "5079",
+      "guesses": [
+        {
+          "guess": "1234",
+          "random": false
+        },
+        {
+          "guess": "5678",
+          "random": false
+        },
+        {
+          "guess": "5612",
+          "random": false
+        },
+        {
+          "guess": "7612",
+          "random": false
+        },
+        {
+          "guess": "5190",
+          "random": false
+        },
+        {
+          "guess": "5790",
+          "random": false
+        },
+        {
+          "guess": "5970",
+          "random": false
+        },
+        {
+          "guess": "5079",
+          "random": false
+        }
+      ],
+      "time": 75,
+      "date": "2022-05-12T18:41:23.348Z",
+      "id": 6
     }
   ]
 }
