@@ -20,11 +20,11 @@ function Guess({ guessObj, password, index}) {
 
     function checkGuess() {
         for (let i = 0; i < password.length; i++){
-            if (guess.guess[i] === password[i]){
+            if (guess[i] === password[i]){
                 hits++
             }
             for (let j = 0; j < password.length; j++){
-                if(guess.guess[i] === password[j]){
+                if(guess[i] === password[j]){
                     misses++
                 }
             }
