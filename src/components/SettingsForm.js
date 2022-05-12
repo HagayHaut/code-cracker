@@ -53,7 +53,7 @@ function SettingsForm({setSettings, settings}) {
   function handleSubmit(e){
     e.preventDefault()
     setSettings(formData)
-    history('../game')
+    history('../home')
   }
 
   return (
