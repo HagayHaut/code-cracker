@@ -26,7 +26,6 @@ function GuessInput({ addGuess, passwordLength, guesses, handleRandomEvent }) {
     function handleGuessSubmit(e) {
         e.preventDefault();
         if(validateGuess(guessInput)) {
-            // console.log('success')
             setGuessInput('')
 
             addGuess({guess: guessInput, random: false}) 

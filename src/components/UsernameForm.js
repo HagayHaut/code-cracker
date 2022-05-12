@@ -56,7 +56,7 @@ function UsernameForm({ onUsernameSubmit, setSettings }) {
           }
         }).then(() => {
           onUsernameSubmit(nameInput)
-          history('/game')
+          history('/home')
         })
     }
 
