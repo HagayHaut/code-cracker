@@ -182,6 +182,126 @@
       "time": 205,
       "date": "2022-05-11T20:41:32.745Z",
       "id": 5
+    },
+    {
+      "username": "johnny",
+      "score": 5,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": "1",
+        "numberOfGameBoards": "2",
+        "showTimer": true
+      },
+      "password": "9032",
+      "guesses": [
+        {
+          "guess": "1234",
+          "random": false
+        },
+        {
+          "guess": "5678",
+          "random": false
+        },
+        {
+          "guess": "9012",
+          "random": false
+        },
+        {
+          "guess": "9014",
+          "random": false
+        },
+        {
+          "guess": "9032",
+          "random": false
+        }
+      ],
+      "time": 54,
+      "date": "2022-05-12T01:14:15.408Z",
+      "id": 6
+    },
+    {
+      "username": "johnny",
+      "score": 8,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": "1",
+        "numberOfGameBoards": "2",
+        "showTimer": true
+      },
+      "password": "9760",
+      "guesses": [
+        {
+          "guess": "1234",
+          "random": false
+        },
+        {
+          "guess": "5678",
+          "random": false
+        },
+        {
+          "guess": "9012",
+          "random": false
+        },
+        {
+          "guess": "9014",
+          "random": false
+        },
+        {
+          "guess": "9032",
+          "random": false
+        },
+        {
+          "guess": "9780",
+          "random": false
+        },
+        {
+          "guess": "9756",
+          "random": false
+        },
+        {
+          "guess": "9760",
+          "random": false
+        }
+      ],
+      "time": 136,
+      "date": "2022-05-12T01:15:39.197Z",
+      "id": 7
+    },
+    {
+      "username": "johnny",
+      "score": 5,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": "1",
+        "numberOfGameBoards": "2",
+        "showTimer": true
+      },
+      "password": "2098",
+      "guesses": [
+        {
+          "guess": "6432",
+          "random": true
+        },
+        {
+          "guess": "1578",
+          "random": false
+        },
+        {
+          "guess": "9012",
+          "random": false
+        },
+        {
+          "guess": "9208",
+          "random": false
+        },
+        {
+          "guess": "2098",
+          "random": false
+        }
+      ],
+      "time": 543,
+      "date": "2022-05-12T02:18:55.762Z",
+      "id": 8
     }
   ]
 }

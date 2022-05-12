@@ -13,7 +13,6 @@ font-weight: bolder;
 `
 
 function GuessInput({ addGuess, passwordLength, guesses, handleRandomEvent }) {
-
     const [guessInput, setGuessInput] = useState('');
     const [helpText, setHelpText] = useState('')
 
@@ -28,15 +27,12 @@ function GuessInput({ addGuess, passwordLength, guesses, handleRandomEvent }) {
         if(validateGuess(guessInput)) {
             // console.log('success')
             setGuessInput('')
-            addGuess({guess: guessInput, random: false})
+            addGuess({guess: guessInput, random: false}) 
             handleRandomEvent();
-        }
-        
+        }   
     }
 
     function validateGuess(guess) {
-
-
         if(guesses.includes(guessInput)){
             setHelpText("Uh oh, looks like you've guessed that already.")
             return false;
@@ -49,18 +45,18 @@ function GuessInput({ addGuess, passwordLength, guesses, handleRandomEvent }) {
             setHelpText(`Your guess isn't the same length as the passcode (${passwordLength}).`)
             return false;
         }
-        if(!parseInt(guess)){
+        if(guess.split('').find(char => char > '9')){
             setHelpText('Uh oh, looks like your guess isn\'t a number.')
-
             return false;
         }
         setHelpText('')
         return true;
     }
 
+
   return (
     <>
-    <form onSubmit={handleGuessSubmit}>
+    <form onSubmit={handleGuessSubmit} autocomplete="off">
         <StyledInput 
             ref={guessInputRef}
             id='guess-input'
