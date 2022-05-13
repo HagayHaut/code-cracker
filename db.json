@@ -571,6 +571,114 @@
       "time": 254,
       "date": "2022-05-13T14:38:37.570Z",
       "id": 13
+    },
+    {
+      "username": "johnny",
+      "score": 4,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": "3",
+        "numberOfGameBoards": "3",
+        "showTimer": true
+      },
+      "password": "1946",
+      "guesses": [
+        {
+          "guess": "1234",
+          "random": false
+        },
+        {
+          "guess": "5678",
+          "random": false
+        },
+        {
+          "guess": "6894",
+          "random": true
+        },
+        {
+          "guess": "1946",
+          "random": false
+        }
+      ],
+      "time": 104,
+      "date": "2022-05-13T17:36:52.952Z",
+      "id": 14
+    },
+    {
+      "username": "johnny",
+      "score": 5,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": "3",
+        "numberOfGameBoards": "3",
+        "showTimer": true
+      },
+      "password": "4257",
+      "guesses": [
+        {
+          "guess": "1234",
+          "random": false
+        },
+        {
+          "guess": "5678",
+          "random": false
+        },
+        {
+          "guess": "6894",
+          "random": true
+        },
+        {
+          "guess": "1946",
+          "random": false
+        },
+        {
+          "guess": "4257",
+          "random": false
+        }
+      ],
+      "time": 141,
+      "date": "2022-05-13T17:37:30.392Z",
+      "id": 15
+    },
+    {
+      "username": "johnny",
+      "score": 6,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": "3",
+        "numberOfGameBoards": "3",
+        "showTimer": true
+      },
+      "password": "8217",
+      "guesses": [
+        {
+          "guess": "1234",
+          "random": false
+        },
+        {
+          "guess": "5678",
+          "random": false
+        },
+        {
+          "guess": "6894",
+          "random": true
+        },
+        {
+          "guess": "1946",
+          "random": false
+        },
+        {
+          "guess": "4257",
+          "random": false
+        },
+        {
+          "guess": "8217",
+          "random": false
+        }
+      ],
+      "time": 153,
+      "date": "2022-05-13T17:37:43.354Z",
+      "id": 16
     }
   ]
 }
