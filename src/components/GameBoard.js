@@ -63,7 +63,7 @@ function GameBoard({ game, guesses, username , settings, handleSolved, timer}) {
  
   // add classname for solved/unsolved boards.
   return (
-    <div className="board">Board {gameBoardNum}
+    <div className={isSolved ? 'solved' : 'board'}>Board {gameBoardNum}
       <div style={{listStyleType: 'none'}}>
           {guessList}
       </div>
