@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-// import Button from 'react-bootstrap/Button';
+import Logo from './Logo';
 
 
 const StyledForm = styled.form`
@@ -62,7 +62,8 @@ function UsernameForm({ onUsernameSubmit, handleReturningUser }) {
 
   return (
     <StyledForm onSubmit={handleSubmit}>
-      <br></br><br></br><br></br>
+      <Logo />
+      
         <label />
         <StyledInput ref={nameInputRef} value={nameInput} type='text' onChange={e => setNameInput(e.target.value)} placeholder='Enter username'></StyledInput>
         <StyledSubmit type='submit' value='Submit'></StyledSubmit>  

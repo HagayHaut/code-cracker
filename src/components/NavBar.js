@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import Logo from './Logo';
 
 function NavBar() {
   //<i class="fa-solid fa-circle-question"></i>
@@ -13,6 +14,7 @@ function NavBar() {
         <NavLink to='/home' className='link' title='Home'>
           <h3><i class="fa fa-home" aria-hidden="true"></i></h3>
         </NavLink>
+        <Logo />
         <NavLink to='/leaderboard' className='link' title='High Scores'>
           <h3><i class="fa fa-trophy" aria-hidden="true"></i></h3>
         </NavLink>

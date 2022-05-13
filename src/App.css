@@ -16,6 +16,13 @@ body {
   background: #d4f4dd;
 }
 
+.logo {
+  font-family: 'Righteous', cursive;
+  font-size: xxx-large;
+  text-shadow: 3px 3px 3px #f9cb9c;
+  padding-bottom: 0px;
+}
+
 .link {
   text-decoration: none;
   width: 80%;
