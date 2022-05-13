@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Guess from './Guess';
  
-function GameBoard({ game, guesses, addGuess, username , shuffle, settings, handleSolved, timer}) {
+function GameBoard({ game, guesses, username , settings, handleSolved, timer}) {
   const {password, gameBoardNum, isSolved} = game
 
   const guessArr = guesses.map(guess => guess.guess)
@@ -64,8 +64,6 @@ function GameBoard({ game, guesses, addGuess, username , shuffle, settings, hand
   // add classname for solved/unsolved boards.
   return (
     <div className="board">Board {gameBoardNum}
-    {/* {password} */}
-    {/* {isSolved? 'solved':'inprogress'} */}
       <div style={{listStyleType: 'none'}}>
           {guessList}
       </div>
