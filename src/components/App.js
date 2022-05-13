@@ -17,23 +17,28 @@ function App() {
     numberOfGameBoards: 1,
     showTimer: false
   });
+  const [isReturningUser, setIsReturningUser] = useState(false)
 
   function onUsernameSubmit(name) {
     setUsername(name)
+  }
+
+  function handleReturningUser(prevSettings){
+    setSettings(prevSettings)
+    setIsReturningUser(true)
   }
 
   return (
     <div className="App">
       { username ? 
         <NavBar /> :
-        <UsernameForm onUsernameSubmit={onUsernameSubmit} setSettings={setSettings}/>
+        <UsernameForm onUsernameSubmit={onUsernameSubmit} handleReturningUser={handleReturningUser}/>
       }
       <br></br>
 
       <Switch>
         <Route path='/home' element={
-            <Game username={username} settings={settings} />}/>
-
+            <Game username={username} settings={settings} isReturningUser={isReturningUser}/>}/>
         <Route path='/settings' element={
           <>  
             <SettingsForm settings={settings} onUsernameSubmit={onUsernameSubmit} setSettings={setSettings}/>
@@ -43,7 +48,8 @@ function App() {
 
         <Route path='/help' element={
           <>
-            <Game username={username} settings={settings}/>
+            <Game username={username} settings={settings} isReturningUser={isReturningUser}/>
+
             <br></br>
             <Help />
           </> }/>

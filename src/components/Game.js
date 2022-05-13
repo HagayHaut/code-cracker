@@ -12,7 +12,7 @@ const StyledButton = styled.button`
   cursor: pointer;
 `
  
-function Game({ username, settings, setSettings }) {
+function Game({ username, settings, isReturningUser }) {
   const {passwordLength, numberOfGameBoards, showTimer} = settings
  
   const [guesses, setGuesses] = useState([]);
@@ -124,7 +124,7 @@ function Game({ username, settings, setSettings }) {
  
   return (
     <div className='game'>
-      <h2>Hello, {username}</h2>
+      <h2>{isReturningUser ? 'Welcome back' : 'Hello'}, {username}</h2>
       {showTimer ? <p>{convertTimer}</p> : null}
       <StyledButton onClick={()=>handleNewGame()}>New Game</StyledButton>
       <br></br>

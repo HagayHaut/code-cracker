@@ -32,7 +32,7 @@ const StyledSubmit = styled.input`
 `
 
 
-function UsernameForm({ onUsernameSubmit, setSettings }) {
+function UsernameForm({ onUsernameSubmit, handleReturningUser }) {
 
     const [nameInput, setNameInput] = useState('')
 
@@ -52,7 +52,7 @@ function UsernameForm({ onUsernameSubmit, setSettings }) {
             return game.username === nameInput
           })
           if(lastGame) {
-            setSettings(lastGame.settings)
+            handleReturningUser(lastGame.settings)
           }
         }).then(() => {
           onUsernameSubmit(nameInput)
