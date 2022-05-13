@@ -1,12 +1,13 @@
 import '../App.css';
 import UsernameForm from './UsernameForm';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from './NavBar';
 import Game from './Game';
 import SettingsForm from './SettingsForm';
-import { Route, Routes as Switch } from 'react-router-dom';
+import { Route, Routes as Switch, useNavigate } from 'react-router-dom';
 import Help from './Help';
 import Leaderboard from './Leaderboard';
+
 
 function App() {
 
@@ -19,6 +20,8 @@ function App() {
   });
   const [isReturningUser, setIsReturningUser] = useState(false)
 
+  const history = useNavigate()
+
   function onUsernameSubmit(name) {
     setUsername(name)
   }
@@ -27,6 +30,16 @@ function App() {
     setSettings(prevSettings)
     setIsReturningUser(true)
   }
+
+  function redirectToLogin(){
+    if (!username){
+      history('/')
+    }
+  }
+
+  useEffect(()=>{
+    redirectToLogin()
+  }, [])
 
   return (
     <div className="App">
