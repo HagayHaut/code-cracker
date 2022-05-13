@@ -39,7 +39,6 @@ function App() {
       <Switch>
         <Route path='/home' element={
             <Game username={username} settings={settings} isReturningUser={isReturningUser}/>}/>
-
         <Route path='/settings' element={
           <>  
             <SettingsForm settings={settings} onUsernameSubmit={onUsernameSubmit} setSettings={setSettings}/>
@@ -50,6 +49,7 @@ function App() {
         <Route path='/help' element={
           <>
             <Game username={username} settings={settings} isReturningUser={isReturningUser}/>
+
             <br></br>
             <Help />
           </> }/>
