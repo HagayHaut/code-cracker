@@ -52,7 +52,20 @@ body {
   color: #4b1d3f;
   padding: 1rem;
   vertical-align: middle;
-  box-shadow: 2px 3px 3px 2px rgba(75, 29, 63, 0.3);
+  box-shadow: 2px 3px 3px 2px rgba(75, 29, 63, 0.5);
+  /* border: 2px solid #102a43; */
+  text-align: left;
+}
+
+.solved {
+  display: inline-block;
+  /* background-color: #cfd9eb; */
+  background-image: linear-gradient(rgba(212,244,221,.2), rgba(212,244,221,0.2)),url(https://img.freepik.com/free-photo/bleached-wooden-textured-background_53876-138713.jpg?w=2000);
+  border-radius: 15px;
+  color: #4b1d3f;
+  padding: 1rem;
+  vertical-align: middle;
+  box-shadow: 2px 3px 3px 2px rgba(19, 87, 41, 0.1);
   /* border: 2px solid #102a43; */
   text-align: left;
 }

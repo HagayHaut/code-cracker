@@ -447,7 +447,6 @@
       "time": 22,
       "date": "2022-05-12T20:12:29.337Z",
       "id": 10
-
     },
     {
       "username": "johnny",
@@ -536,7 +535,42 @@
       "time": 162,
       "date": "2022-05-13T13:20:29.508Z",
       "id": 12
-
+    },
+    {
+      "username": "test",
+      "score": 5,
+      "settings": {
+        "passwordLength": 4,
+        "randomEventsLimit": 0,
+        "numberOfGameBoards": "3",
+        "showTimer": false
+      },
+      "password": "1259",
+      "guesses": [
+        {
+          "guess": "1234",
+          "random": false
+        },
+        {
+          "guess": "5678",
+          "random": false
+        },
+        {
+          "guess": "1290",
+          "random": false
+        },
+        {
+          "guess": "1269",
+          "random": false
+        },
+        {
+          "guess": "1259",
+          "random": false
+        }
+      ],
+      "time": 254,
+      "date": "2022-05-13T14:38:37.570Z",
+      "id": 13
     }
   ]
 }
