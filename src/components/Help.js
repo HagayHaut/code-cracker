@@ -1,8 +1,5 @@
 import React from 'react'
 
-const hitIcon = '🟢'
-const missIcon = '🟡'
-
 function Help() {
   return (
     <div className='how-to'>
