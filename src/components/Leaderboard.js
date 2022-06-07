@@ -30,6 +30,10 @@ function Leaderboard(){
       scoresToDisplay = scores.sort((a, b) => a[sortBy] < b[sortBy] ? -1 : 1)
     }
 
+    if (scoresToDisplay.length > 50) {
+      scoresToDisplay = scoresToDisplay.slice(0, 50);
+    }
+
     function Score({username, score, position, time, date}){
         return <tr>
             <td>{username}</td>
