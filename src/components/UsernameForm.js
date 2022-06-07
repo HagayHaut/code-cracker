@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Logo from './Logo';
 
+const backend = 'https://code-cracker-backend.herokuapp.com/'
+
 
 const StyledForm = styled.form`
   position: fixed;
@@ -45,7 +47,7 @@ function UsernameForm({ onUsernameSubmit, handleReturningUser }) {
 
     function handleSubmit(e) {
       e.preventDefault()
-      fetch('http://localhost:4000/games')
+      fetch(backend + 'games')
         .then(r => r.json())
         .then(d => {
           const lastGame = d.reverse().find(game => {

@@ -1,5 +1,7 @@
 import React from 'react';
 import Guess from './Guess';
+
+const backend = 'https://code-cracker-backend.herokuapp.com/'
  
 function GameBoard({ game, guesses, username , settings, handleSolved, timer}) {
   const {password, gameBoardNum, isSolved} = game
@@ -38,7 +40,7 @@ function GameBoard({ game, guesses, username , settings, handleSolved, timer}) {
       time: timer,
       date: new Date()
     }
-    fetch('http://localhost:4000/games',{
+    fetch(backend + 'games',{
       method: "POST",
       headers:{
         'Content-Type': 'application/json'

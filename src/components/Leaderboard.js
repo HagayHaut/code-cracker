@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 
+const backend = 'https://code-cracker-backend.herokuapp.com/'
+
 
 function Leaderboard(){
     const [scores, setScores] = useState([])
     const [sortBy, setSortBy] = useState('score')
 
     useEffect(() => {
-        fetch('http://localhost:4000/games')
+        fetch(backend + 'games')
         .then(r => r.json())
         .then(setScores)
     },[])
